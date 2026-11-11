@@ -15,3 +15,35 @@ function validate_credentials($username, $password)
         return false;
     }
 }
+
+function signup($user, $pass, $email, $phone)
+{
+
+
+    $servername = "mysql.selfmade.ninja:3306";
+    $username = "briyankan";
+    $password = "Briyan2303";
+    $dbname = "briyankan_clickora";
+
+// Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "INSERT INTO `auth` (`username`, `password`, `email`, `phone`, `blocked`, `active`)
+    VALUES ('$user', '$pass', '$email', '$phone', '0', '1');";
+    $result = false;
+
+
+    if ($conn->query($sql) === true) {
+        $result = true;
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+        $result = false;
+    }
+
+    $conn->close();
+    return $result;
+}

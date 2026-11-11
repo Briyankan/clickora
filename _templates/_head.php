@@ -18,7 +18,13 @@
       href="https://getbootstrap.com/docs/6.0/examples/album/"
     />
     <script src="/clickora/assets/js/color-modes.js"></script>
-    <link href="/clickora/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/clickora/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <?php if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/clickora/css/' . basename($_SERVER['PHP_SELF'], ".php") . ".css")) {
+        ?> <link href="/clickora/css/<?=basename($_SERVER['PHP_SELF'], ".php") ?>.css" rel="stylesheet"
+
+    <?php }?>
+    
+ 
     <meta name="theme-color" content="#712cf9" />
     <style>
       .bd-placeholder-img {
