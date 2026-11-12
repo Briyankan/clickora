@@ -25,25 +25,25 @@ function signup($user, $pass, $email, $phone)
     $password = "Briyan2303";
     $dbname = "briyankan_clickora";
 
-// Create connection
+    // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
+    // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
 
     $sql = "INSERT INTO `auth` (`username`, `password`, `email`, `phone`, `blocked`, `active`)
     VALUES ('$user', '$pass', '$email', '$phone', '0', '1');";
-    $result = false;
+    $error = false;
 
 
     if ($conn->query($sql) === true) {
-        $result = true;
+        $error = false;
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-        $result = false;
+        //echo "Error: " . $sql . "<br>" . $conn->error;
+        $error = $conn->error;
     }
 
     $conn->close();
-    return $result;
+    return $error;
 }
