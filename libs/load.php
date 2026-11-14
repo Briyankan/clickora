@@ -1,5 +1,6 @@
 <?php
 
+include_once 'includes/Mic.class.php';
 function load_template($name)
 {
     // print("including $name.php");

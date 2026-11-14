@@ -5,7 +5,7 @@ include 'libs/load.php';
 ?>
 
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="en" data-bs-theme="auto"> 
 <?php load_template('_head'); ?>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">

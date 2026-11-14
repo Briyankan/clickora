@@ -10,30 +10,7 @@ $password = $_POST['password'];
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
   <?php load_template('_head'); ?>
-<style>
-      /* login and signin style */
-      .form-signin {
-  max-width: 330px;
-  padding: 1rem;
-}
 
-.form-signin .form-floating:focus-within {
-  z-index: 2;
-}
-
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-    </style>
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">

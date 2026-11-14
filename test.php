@@ -13,11 +13,22 @@
 //     print("File \n");
 //     print_r($_FILES);
 
-    if (signup("briyankan", "password", "briyankan@gmail.com", "0776176595")) {
-        echo "Success";
-    } else {
-        echo "fail";
-    }
+    // if (signup("briyankan", "password", "briyankan@gmail.com", "0776176595")) {
+    //     echo "Success";
+    // } else {
+    //     echo "fail";
+    // }
+
+    $mic1 = new Mic();
+    $mic2 = new Mic();
+
+    $mic1->brand = "Roda";
+    $mic2->brand = "Hyper";
+
+    $mic1->light = "RGB";
+    $mic1->setLight("White");
+
+
 
     ?>
 </pre>
